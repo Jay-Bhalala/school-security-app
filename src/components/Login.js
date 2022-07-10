@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from 'react';
 import './Login.css'
+import Dropdown from 'react-bootstrap/Dropdown';
 
 
 function Login() {
@@ -57,6 +58,16 @@ function Login() {
     const renderForm = (
       <div className="form">
         <form onSubmit={handleSubmit}>
+        <Dropdown>
+          <Dropdown.Toggle className ="dropdown">
+            Choose your role
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">Teacher</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Administrator</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
           <div className="input-container">
             <label>Username </label>
             <input type="text" name="uname" required />
