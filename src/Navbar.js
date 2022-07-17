@@ -39,6 +39,7 @@ function BasicNavBar() {
                     <Nav.Link href="/attendance">Attendance</Nav.Link>
                     <Nav.Link href="/map">Map</Nav.Link>
                     <Nav.Link href="/updates">Updates</Nav.Link>
+                    <Nav.Link href="/login">Login</Nav.Link>
                   </Nav>
                 </Offcanvas.Body>
               </Navbar.Offcanvas>
