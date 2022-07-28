@@ -2,7 +2,9 @@ import Table from 'react-bootstrap/Table';
 
 function Updates() {
   return (
-    <Table striped>
+    <div> 
+        <h1> UPDATES </h1>
+        <Table striped>
       <thead>
         <tr>
           <th>Time Posted</th>
@@ -20,112 +22,116 @@ function Updates() {
         </tr>
 
         <tr>
-          <td>7:15</td>
+          <td>7:30</td>
           <td>HEMANTH NAGUBHAI</td>
-          <td>Thornton</td>
+          <td>hallway</td>
           <td>MILD</td>
         </tr>
 
         <tr>
-          <td>7:15</td>
+          <td>7:45</td>
           <td>ARNAY MAJUMDAR</td>
-          <td>Thornton</td>
+          <td>gym</td>
           <td>MILD</td>
         </tr>
 
         <tr>
-          <td>7:15</td>
+          <td>8:15</td>
           <td>VIKRANT JEEVA</td>
-          <td>Thornton</td>
+          <td>AMSTUD room</td>
           <td>MILD</td>
         </tr>
 
         <tr>
-          <td>7:15</td>
+          <td>9:15</td>
           <td>ROSHAN VAJINAPALLI</td>
-          <td>Thornton</td>
+          <td>making tiktok</td>
           <td>MILD</td>
         </tr>
 
         <tr>
-          <td>7:15</td>
+          <td>11:15</td>
           <td>KARTHIK NEMANA</td>
-          <td>Thornton</td>
+          <td>bathroom</td>
           <td>MILD</td>
         </tr>
 
         <tr>
-          <td>7:15</td>
+          <td>7:57</td>
           <td> DHANUSH JAIN </td>
-          <td>Thornton</td>
+          <td>gym</td>
           <td>MILD</td>
         </tr>
 
         <tr>
-          <td>7:15</td>
+          <td>7:42</td>
           <td>NIKHIL JAIN</td>
-          <td>Thornton</td>
+          <td>fukin bitches in the bathroom</td>
           <td>MILD</td>
         </tr>
 
         <tr>
           <td>7:15</td>
           <td> AAYUSH GANDHI </td>
-          <td>Thornton</td>
+          <td>hallway b5</td>
           <td>MILD</td>
         </tr>
 
         <tr>
           <td>7:15</td>
           <td>AKSHAT SAINI</td>
-          <td>Thornton</td>
+          <td>basketball</td>
           <td>MILD</td>
         </tr>
 
         <tr>
           <td>7:15</td>
           <td>JAY BHALALA</td>
-          <td>Thornton</td>
+          <td>office</td>
           <td>MILD</td>
         </tr>
 
         <tr>
           <td>7:15</td>
           <td>ANIKA DODOAMNE</td>
-          <td>Thornton</td>
+          <td>mars</td>
           <td>MILD</td>
         </tr>
 
         <tr>
           <td>7:15</td>
           <td>KAPIL TASPA</td>
-          <td>Thornton</td>
+          <td>bathroom</td>
           <td>MILD</td>
         </tr>
 
         <tr>
           <td>7:15</td>
           <td>ANJALI GHELANI</td>
-          <td>Thornton</td>
+          <td>b3</td>
           <td>MILD</td>
         </tr>
 
         <tr>
           <td>7:15</td>
           <td>ANUSHA DUGAD</td>
-          <td>Thornton</td>
+          <td>b4</td>
           <td>MILD</td>
         </tr>
 
         <tr>
           <td>7:15</td>
           <td>MXNXS JXIN</td>
-          <td>Thornton</td>
+          <td>b5</td>
           <td>MILD</td>
         </tr>
 
       </tbody>
     </Table>
+    <button style={{backgroundColor:"lightBlue", color:"black"}}> ADD POST </button>
+    </div>
+    
+    
   );
 }
 
