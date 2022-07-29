@@ -3,8 +3,6 @@ import './Attendance.css'
 import Student from './Student.js'
 import { useState } from 'react'
 
-
-
 function Attendance() {
     
     const [students, setStudents] = useState([
@@ -20,14 +18,13 @@ function Attendance() {
       setStudents(students.map((student)=> student.id === id ? {...student, missing: !student.missing}: student))
     }
 
-
     return (
-      <div className = 'container'>
+      <div>
         <header className = 'header'>
             <h1>Attendance</h1>
             <p className = 'text'>Your class</p>
             <a href="/missing"><button className = 'btn'>Missing</button> </a>
-        </header>
+        </header>   
         <div>
           {students.map((student) => (<Student key={student.id} student={student} onMissing = {missingStudent}/>))}
         </div>
