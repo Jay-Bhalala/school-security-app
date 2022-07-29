@@ -5,9 +5,10 @@ import Footer from './components/Footer.js';
 import Home from './components/Home.js';
 import Map from './components/Map.js';
 import Forum from './components/Forum.js';
-import Attendance from './components/Attendance.js';
+import Attendance from './components/Attendance/Attendance.js';
 import Updates from './components/Updates.js';
 import Login from './components/Login.js'
+import Missing from './components/Attendance/Missing.js'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/map" element={<Map />} />
         <Route exact path="/forum" element={<Forum />} />
         <Route exact path="/attendance" element={<Attendance />} />
+        <Route exact path="/missing" element={<Missing />} />
         <Route exact path="/updates" element={<Updates />} />
       </Routes>
 
