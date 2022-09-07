@@ -7,7 +7,8 @@ function Map() {
 
   function myFunction()
     {
-      setIsActive(true);
+      //setIsActive(true);
+      console.log("hi")
     }
 
     return (
@@ -15,7 +16,7 @@ function Map() {
         <div class="container">
           <div class="map-container">
             <img src="https://sites.google.com/site/cruznaligaselementaryschoolqc/school-map/ground.png"></img>
-            <div class="point mainhallway tippy" title="Main Hallway"></div>
+            <div class="point mainhallway tippy" title="Main Hallway" onClick={myFunction}></div>
             <div class="point frontoffice tippy" title="Front Office"></div>
             <div class="point avroom tippy" title="AV Room"></div>
             <div class="point room107 tippy" title="Room 107"></div>

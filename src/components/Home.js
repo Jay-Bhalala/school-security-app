@@ -14,7 +14,10 @@ function Home() {
           <Col>
             <Card>
               <Card.Body>
-                <Card.Title><a href='/map'> <Map /> </a></Card.Title>
+                <Card.Title><a href='/map'> Map </a></Card.Title>
+                <Card.Text>
+                  <Map />
+                </Card.Text>
               </Card.Body>
             </Card>
           </Col>
