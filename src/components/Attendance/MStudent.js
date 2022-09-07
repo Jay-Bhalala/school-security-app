@@ -3,11 +3,11 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-function Student({student, onPresent, onMissing}) {
+function MStudent({student, onFound}) {
     const [show, setShow] = useState(false);
     function handleClose(){
       setShow(false);
-      onMissing(student.id)
+      onFound(student.id)
 
     }
     const handleShow = () => setShow(true);
@@ -15,16 +15,16 @@ function Student({student, onPresent, onMissing}) {
         <>
         <div className = {`student ${student.present ? 'missing': ''}`}>
         <h3>
-            {student.name} <button className = 'btn' onClick={()=> onPresent(student.id)}>Present </button> <Button onClick={handleShow}> Missing </Button> 
+            {student.name} <Button onClick={handleShow}> Found </Button> 
         </h3>
       </div>
       <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
-        <Modal.Title>Possible Locations</Modal.Title>
+        <Modal.Title>Found Student</Modal.Title>
       </Modal.Header>
       <Modal.Body>
       <>
-        <Form.Label htmlFor="inputPassword5">Please Input All Possible Location(s) Of The Student</Form.Label>
+        <Form.Label htmlFor="inputPassword5">Input location found</Form.Label>
         <Form.Control
           id="input"
         />
@@ -42,4 +42,4 @@ function Student({student, onPresent, onMissing}) {
     );
 }
 
-export default Student;
+export default MStudent;
