@@ -1,137 +1,120 @@
 import Table from 'react-bootstrap/Table';
+import React,{ useState} from 'react';
+//import { nanoid } from "nanoid";
 
 function Updates() {
+
+  const data = [
+    { id:1, time: "7:15", name: "Nikhil Jain", lastSeen: "B5", severity: "SEVERE" },
+    { id:2, time: "7:45", name: "Aayush Gandhi", lastSeen: "Cafeteria", severity: "MILD"  },
+    { id:3, time: "8:15", name: "Akshat Saini", lastSeen: "Gym", severity: "LOW"  },
+    { id:4, time: "8:45", name: 'Jay Bhalala', lastSeen: "B1", severity: "SEVERE"  },
+    { id:5, time: "9:15", name: "Hardik Singh", lastSeen: "Fine Arts", severity: "HIGH"  }
+  ]
+  
+  const [contacts, setContacts] = useState(data);
+
+  const [addFormData, setAddFormData] = useState({
+    time: "",
+    name: "",
+    lastSeen: "",
+    severity: "",
+  });
+
+  const handleAddFormChange = (event) => {
+    event.preventDefault();
+
+    const fieldName = event.target.getAttribute("name");
+    const fieldValue = event.target.value;
+
+    const newFormData = { ...addFormData };
+    newFormData[fieldName] = fieldValue;
+
+    setAddFormData(newFormData);
+  };
+
+  const handleAddFormSubmit = (event) => {
+    event.preventDefault();
+
+    const newContact = {
+      time: addFormData.time,
+      name: addFormData.name,
+      lastSeen: addFormData.lastSeen,
+      severity: addFormData.severity,
+    };
+
+    const newContacts = [...contacts, newContact];
+    setContacts(newContacts);
+  };
+
+
   return (
-    <div> 
-        <h1> UPDATES </h1>
-        <Table striped>
-      <thead>
-        <tr>
-          <th>Time Posted</th>
-          <th>Name</th>
-          <th>Last Seen</th>
-          <th> Severity Level</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>9:00 am</td>
-          <td>MANAS JAIN</td>
-          <td>cafeteria</td>
-          <td>SEVERE</td>
-        </tr>
+    <div className="App">
+      <h1>Updates</h1>
+      <Table striped bordered hover >
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Name</th>
+            <th>Last seen</th>
+            <th>Severity Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            contacts.map((contact) => {
+              return (
+                <tr>
+                  <td>{contact.time}</td>
+                  <td>{contact.name}</td>
+                  <td>{contact.lastSeen}</td>
+                  <td>{contact.severity}</td>
+                </tr>
+              )
+            })
+          }
+        </tbody>
+      </Table>
+      
 
-        <tr>
-          <td>7:30</td>
-          <td>HEMANTH NAGUBHAI</td>
-          <td>hallway</td>
-          <td>MILD</td>
-        </tr>
+      <h2>Add an Update</h2>
+      <form  >
+        <input
+          type="text"
+          name="time"
+          required="required"
+          placeholder="Time..."
+          onChange={handleAddFormChange}
+        />
 
-        <tr>
-          <td>7:45</td>
-          <td>ARNAY MAJUMDAR</td>
-          <td>gym</td>
-          <td>MILD</td>
-        </tr>
+        <input
+          type="text"
+          name="name"
+          required="required"
+          placeholder="Name..."
+          onChange={handleAddFormChange}
+        />
 
-        <tr>
-          <td>8:15</td>
-          <td>VIKRANT JEEVA</td>
-          <td>AMSTUD room</td>
-          <td>MILD</td>
-        </tr>
+        <input
+          type="text"
+          name="lastSeen"
+          required="required"
+          placeholder="Last seen..."
+          onChange={handleAddFormChange}
+        />
 
-        <tr>
-          <td>9:15</td>
-          <td>ROSHAN VAJINAPALLI</td>
-          <td>making tiktok</td>
-          <td>MILD</td>
-        </tr>
+        <input
+          type="text"
+          name="severity"
+          required="required"
+          placeholder="Severity level..."
+          onChange={handleAddFormChange}
+        />
 
-        <tr>
-          <td>11:15</td>
-          <td>KARTHIK NEMANA</td>
-          <td>bathroom</td>
-          <td>MILD</td>
-        </tr>
+        <button onClick={handleAddFormSubmit} type="submit">Add Update</button>
 
-        <tr>
-          <td>7:57</td>
-          <td> DHANUSH JAIN </td>
-          <td>gym</td>
-          <td>MILD</td>
-        </tr>
-
-        <tr>
-          <td>7:42</td>
-          <td>NIKHIL JAIN</td>
-          <td>fukin bitches in the bathroom</td>
-          <td>MILD</td>
-        </tr>
-
-        <tr>
-          <td>7:15</td>
-          <td> AAYUSH GANDHI </td>
-          <td>hallway b5</td>
-          <td>MILD</td>
-        </tr>
-
-        <tr>
-          <td>7:15</td>
-          <td>AKSHAT SAINI</td>
-          <td>basketball</td>
-          <td>MILD</td>
-        </tr>
-
-        <tr>
-          <td>7:15</td>
-          <td>JAY BHALALA</td>
-          <td>office</td>
-          <td>MILD</td>
-        </tr>
-
-        <tr>
-          <td>7:15</td>
-          <td>ANIKA DODOAMNE</td>
-          <td>mars</td>
-          <td>MILD</td>
-        </tr>
-
-        <tr>
-          <td>7:15</td>
-          <td>KAPIL TASPA</td>
-          <td>bathroom</td>
-          <td>MILD</td>
-        </tr>
-
-        <tr>
-          <td>7:15</td>
-          <td>ANJALI GHELANI</td>
-          <td>b3</td>
-          <td>MILD</td>
-        </tr>
-
-        <tr>
-          <td>7:15</td>
-          <td>ANUSHA DUGAD</td>
-          <td>b4</td>
-          <td>MILD</td>
-        </tr>
-
-        <tr>
-          <td>7:15</td>
-          <td>MXNXS JXIN</td>
-          <td>b5</td>
-          <td>MILD</td>
-        </tr>
-
-      </tbody>
-    </Table>
-    <button style={{backgroundColor:"lightBlue", color:"black"}}> ADD POST </button>
+      </form>
     </div>
-    
-    
   );
 }
 
