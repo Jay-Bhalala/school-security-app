@@ -66,6 +66,7 @@ function Login() {
           <Dropdown.Menu>
             <Dropdown.Item href="#/action-1">Teacher</Dropdown.Item>
             <Dropdown.Item href="#/action-2">Administrator</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Student</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
           <div className="input-container">

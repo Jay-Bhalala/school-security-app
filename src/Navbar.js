@@ -34,8 +34,8 @@ function BasicNavBar() {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                   <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Nav.Link href="/login">Login</Nav.Link>
-                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/">Login</Nav.Link>
+                    <Nav.Link href="/home">Home</Nav.Link>
                     <Nav.Link href="/forum">Forum</Nav.Link>
                     <Nav.Link href="/attendance">Attendance</Nav.Link>
                     <Nav.Link href="/map">Map</Nav.Link>

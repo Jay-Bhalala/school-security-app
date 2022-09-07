@@ -2,12 +2,10 @@ import React from "react";
 
 function Map() {
     return (
-        <div>
-        <h2>
-            Map
-        </h2>
+      <div>
+          Map      
       </div>
     );
-}
-
-export default Map;
+  }
+  
+  export default Map;
