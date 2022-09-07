@@ -6,15 +6,15 @@ import mapPlaceHolder from './preschool-map-placeholder.jpg';
 import Updates from "./Updates";
 import Forum from "./Forum";
 import Attendance from "./Attendance/Attendance";
+import Map from "./Map";
 
 function Home() {
     return (
       <Row xs={1} md={2} className="g-4">
           <Col>
             <Card>
-              <Card.Img variant="top" src={mapPlaceHolder} />
               <Card.Body>
-                <Card.Title><a href='/map'>Map</a></Card.Title>
+                <Card.Title><a href='/map'> <Map /> </a></Card.Title>
               </Card.Body>
             </Card>
           </Col>
