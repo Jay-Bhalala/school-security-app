@@ -16,8 +16,8 @@ function App() {
       <BasicNavBar />
 
       <Routes>
-        <Route exact path="/" element={<Home />} />
         <Route exact path="/login" element={<Login />} />
+        <Route exact path="/" element={<Home />} />
         <Route exact path="/map" element={<Map />} />
         <Route exact path="/forum" element={<Forum />} />
         <Route exact path="/attendance" element={<Attendance />} />

@@ -80,7 +80,7 @@ function Updates() {
       <h2>Add an Update</h2>
       <form  >
         <input
-          type="text"
+          type="time"
           name="time"
           required="required"
           placeholder="Time..."

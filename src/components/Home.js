@@ -3,6 +3,9 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import mapPlaceHolder from './preschool-map-placeholder.jpg';
+import Updates from "./Updates";
+import Forum from "./Forum";
+import Attendance from "./Attendance/Attendance";
 
 function Home() {
     return (
@@ -20,7 +23,7 @@ function Home() {
               <Card.Body>
                 <Card.Title><a href='/updates'>Updates</a></Card.Title>
                 <Card.Text>
-                  Sample Text
+                  <Updates />
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -30,7 +33,7 @@ function Home() {
               <Card.Body>
                 <Card.Title><a href='/attendance'>Missing Students</a></Card.Title>
                 <Card.Text>
-                  Sample Text
+                  <Attendance />
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -40,7 +43,7 @@ function Home() {
               <Card.Body>
                 <Card.Title><a href='/forum'>Forum</a></Card.Title>
                 <Card.Text>
-                  Sample Text
+                  <Forum />
                 </Card.Text>
               </Card.Body>
             </Card>
