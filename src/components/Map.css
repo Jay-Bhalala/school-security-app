@@ -1,0 +1,99 @@
+body {
+    height: 100%;
+}
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.map-container {
+    padding: 3.2rem 0.8rem;
+    position: relative;
+    display: inline-block;
+}
+.map-container img {
+    width: 100%;
+}
+.map-container .point {
+    cursor: pointer;
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: #00abc142;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    will-change: transform, box-shadow;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 rgba(0, 171, 193, 0.301);
+    animation: pulse 3s infinite;
+}
+.map-container .point:hover {
+    animation: none;
+    transform: translate(-50%, -50%) scale3D(1.35, 1.35, 1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background-color: red;
+}
+.map-container .mainhallway {
+    top: 54%;
+    left: 22%;
+}
+.map-container .brasil {
+    top: 64%;
+    left: 28%;
+}
+.map-container .frontoffice {
+    top: 72%;
+    left: 10%;
+}
+.map-container .avroom {
+    top: 35%;
+    left: 21%;
+}
+.map-container .room108 {
+    top: 28%;
+    left: 30%;
+}
+.map-container .room107 {
+    top: 28%;
+    left: 60%;
+}
+.map-container .room106 {
+    top: 15%;
+    left: 75%;
+}
+.map-container .cafeteria {
+    top: 50%;
+    left: 50%;
+}
+.map-container .library {
+    top: 68%;
+    left: 47%;
+}
+.map-container .mainentrance {
+    top: 88%;
+    left: 66%;
+}
+.map-container .room103 {
+    top: 68%;
+    left: 81%;
+}
+.map-container .room105 {
+    top: 34%;
+    left: 75%;
+}
+.map-container .room104 {
+    top: 58%;
+    left: 75%;
+}
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 172, 193, 0.5);
+   }
+    70% {
+        box-shadow: 0 0 0 25px rgba(0, 172, 193, 0);
+   }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 172, 193, 0);
+   }
+}
