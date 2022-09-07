@@ -18,7 +18,7 @@ function BasicNavBar() {
             className="mb-3"
           >
             <Container fluid>
-            <Navbar.Brand href="/">School Security</Navbar.Brand>
+            <Navbar.Brand href="/">SecurEd</Navbar.Brand>
               <Navbar.Toggle
                 aria-controls={`offcanvasNavbar-expand-${expand}`}
               />
