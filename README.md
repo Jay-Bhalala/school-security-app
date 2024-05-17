@@ -1,0 +1,1 @@
+This application prevents school shooting fatalities by allowing teachers to pinpoint locations on a map where school threats were last seen, report missing student alerts, and discuss updates on a forum.
